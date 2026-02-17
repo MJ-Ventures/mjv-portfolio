@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const TEAM_MEMBERS = [
   {
@@ -6,112 +7,112 @@ const TEAM_MEMBERS = [
     name: "Marley Rosario",
     title: "CEO + Full Stack Engineering",
     image: "/images/our-team/marley-rosario.svg",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/marley-rosario/",
   },
   {
     id: "2",
     name: "Forrest Haydon",
     title: "CPO + AI Product Engineering",
     image: "/images/our-team/forrest-haydon.svg",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/forrest-haydon/",
   },
   {
     id: "3",
     name: "Jacob Salazar",
     title: "Lead DevOps + Back-end Engineering",
     image: "/images/our-team/jacob-salazar.svg",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/jacob-salazar700/",
   },
   {
     id: "4",
     name: "Iryna Motyashok",
     title: "CTO + Senior Backend Engineer",
     image: "/images/our-team/iryna-motyashok.svg",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/iryna-motyashok/",
   },
   {
     id: "5",
     name: "Nkanyiso Nzimande",
     title: "Senior Backend Engineer",
     image: "/images/our-team/nkanyiso-nzimande.svg",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/nkanyiso-nzimande-48648b122/",
   },
   {
     id: "6",
     name: "Nebojsa Bogdanovic",
     title: "COO + Senior Backend Engineer",
     image: "/images/our-team/nebojsa-bogdanovic.svg",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/nebojsa-bogdanovic-/",
   },
   {
     id: "7",
     name: "Belem Salgado",
     title: "UI/UX Lead Designer",
     image: "/images/our-team/belem-salgado.svg",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/belemsalgado/",
   },
   {
     id: "8",
     name: "Connor Morgan",
     title: "CRO + Business Development",
     image: "/images/our-team/connor-morgan.svg",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/connor-morgan-86707b8b/",
   },
   {
     id: "9",
     name: "Maria Arias",
     title: "Administrative Lead + UI/UX Designer",
     image: "/images/our-team/maria-arias.svg",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/maria-arias-4970b8309/",
   },
   {
     id: "10",
     name: "Zohaib Aslam",
     title: "Frontend + DevOps Engineer",
     image: "/images/our-team/zohaib-aslam.svg",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/hzohaibaslam/",
   },
   {
     id: "11",
     name: "Myles Rosario",
     title: "Software Engineer",
     image: "/images/our-team/myles-rosario-1.svg",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/myles-rosario-1a83b425a/",
   },
   {
     id: "12",
     name: "Daniel Cody",
     title: "Communications Lead + Content Creation",
     image: "/images/our-team/daniel-cody.svg",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/daniel-cody-8106551a3/",
   },
   {
     id: "13",
     name: "Tejumade Olomola",
     title: "UI/UX Senior Designer",
     image: "/images/our-team/tejumade-olomola.svg",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/tejfromhyperpels/",
   },
   {
     id: "14",
     name: "Kelvin Celso",
     title: "Full Stack Engineering",
     image: "/images/our-team/kelvin-celso.svg",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/kelvin-celso/",
   },
   {
     id: "15",
     name: "Tolu 'Akosile",
     title: "UI/UX Senior Designer",
     image: "/images/our-team/tolu-akosile.svg",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/toluakosile/",
   },
   {
     id: "16",
     name: "Nercio Nhatave",
     title: "Frontend + DevOps Engineer",
     image: "/images/our-team/nercio-nhatave.svg",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/nercio-nhatave/",
   },
 ];
 
@@ -141,13 +142,22 @@ const MeetTheTeam = () => {
                     {member.title}
                   </span>
                 </div>
-                <Image
-                  src="/icons/linkedin.svg"
-                  alt="LinkedIn"
-                  width={29}
-                  height={29}
-                  className="flex-shrink-0"
-                />
+                {member.linkedIn ? (
+                <Link
+                  href={member.linkedIn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${member.name} on LinkedIn`}
+                  className="shrink-0"
+                >
+                  <Image
+                    src="/icons/linkedin.svg"
+                    alt="LinkedIn"
+                    width={29}
+                    height={29}
+                  />
+                </Link>
+              ) : null}
               </div>
             </div>
           ))}
