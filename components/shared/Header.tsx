@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { ROUTES } from "@/constants/routes";
-import CustomButton from "./CustomButton";
+import BookACallButton from "./BookACallButton";
 import { X } from "lucide-react";
 
 const NAV_LINKS = [
@@ -93,12 +93,10 @@ const Header = () => {
             </Link>
           ))}
         </div>
-        <CustomButton
+        <BookACallButton
           variant="secondary"
           className="hidden md:block py-2 px-4 rounded-[8px] font-medium text-[14px] leading-5 tracking-[-0.15px] text-black-01 hover:bg-black-01 hover:text-white-01"
-        >
-          Book a call
-        </CustomButton>
+        />
         <button className="block md:hidden p-2" onClick={handleOpen}>
           <Image src="/icons/hamburger.svg" alt="Menu" width={24} height={24} />
         </button>
@@ -137,12 +135,10 @@ const Header = () => {
           </nav>
 
           {/* Book a call button */}
-          <CustomButton
+          <BookACallButton
             variant="secondary"
             className="w-full py-[10px] px-4 rounded-full font-medium text-[18px] leading-[28px] tracking-[-0.44px] shadow-primary border-[0.56px] border-black-02 text-black-01 hover:bg-black-01 hover:text-white-01"
-          >
-            Book a call
-          </CustomButton>
+          />
         </div>
       </div>
     </header>

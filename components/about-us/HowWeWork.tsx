@@ -1,4 +1,4 @@
-import CustomButton from "../shared/CustomButton";
+import BookACallButton from "../shared/BookACallButton";
 
 const HowWeWork = () => {
   return (
@@ -28,12 +28,10 @@ const HowWeWork = () => {
             </div>
           ))}
         </div>
-        <CustomButton
+        <BookACallButton
           variant="primary"
           className="w-fit mx-auto py-[8px] px-[16px] rounded-[32px] font-semibold text-[16px] leading-[24px] tracking-0"
-        >
-          Book a call
-        </CustomButton>
+        />
       </div>
     </div>
   );

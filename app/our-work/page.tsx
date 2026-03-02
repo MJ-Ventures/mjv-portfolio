@@ -1,5 +1,5 @@
 import Sponsors from "@/components/shared/Sponsors";
-import CustomButton from "@/components/shared/CustomButton";
+import BookACallButton from "@/components/shared/BookACallButton";
 import Logo from "@/components/shared/Logo";
 import Image from "next/image";
 import SolutionList from "@/components/our-work/SolutionList";
@@ -24,12 +24,10 @@ const OurWorkPage = () => {
         <p className="font-normal text-[24px] leading-[32px] tracking-[0.07px] text-center text-gray-01">
           From Fortune 500s to scrappy startups and award-winning nonprofits.
         </p>
-        <CustomButton
+        <BookACallButton
           variant="secondary"
           className="py-[10px] px-4 font-medium text-[18px] leading-[28px] tracking-[-0.44px] rounded-full shadow-primary"
-        >
-          Book a call
-        </CustomButton>
+        />
       </div>
       {/* Remaing Sections */}
       <div className="bg-white py-[30px] lg:py-[110px] flex flex-col gap-[60px] lg:gap-[110px]">

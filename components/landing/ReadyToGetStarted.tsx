@@ -1,4 +1,4 @@
-import CustomButton from "../shared/CustomButton";
+import BookACallButton from "../shared/BookACallButton";
 import RegistrationForm from "../shared/RegistrationForm";
 
 const ReadyToGetStarted = () => {
@@ -14,9 +14,7 @@ const ReadyToGetStarted = () => {
             Tell us about your project and let&apos;s build something amazing
             together.
           </p>
-          <CustomButton className="mt-6 w-fit py-[10px] px-[24px] rounded-[32px] font-medium text-[14px] leading-[20px] tracking-[-0.15px]">
-            Book a call
-          </CustomButton>
+          <BookACallButton className="mt-6 w-fit py-[10px] px-[24px] rounded-[32px] font-medium text-[14px] leading-[20px] tracking-[-0.15px]" />
         </div>
         {/* Right Section */}
         <div className="w-full lg:max-w-[584px]">

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Logo from "../shared/Logo";
 import CustomButton from "../shared/CustomButton";
+import BookACallButton from "../shared/BookACallButton";
 import { ROUTES } from "@/constants/routes";
 
 const HERO_CARDS = [
@@ -44,13 +45,10 @@ const HeroSection = () => {
           <Image src="/icons/arrow.svg" alt="Arrow" width={16} height={16} />
         </CustomButton>
 
-        <CustomButton
+        <BookACallButton
           variant="secondary"
-          href={ROUTES.ABOUT_US}
           className="py-[10px] px-4 font-medium text-[18px] leading-7 tracking-[-0.44px] rounded-full shadow-primary border-[0.56px] border-black-02"
-        >
-          Book a call
-        </CustomButton>
+        />
       </div>
       {/* Cards */}
       <div className="lg:mb-[78px] w-full md:max-w-[80%] mx-auto flex flex-col md:flex-row md:items-center md:justify-center gap-8">

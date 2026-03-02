@@ -2,6 +2,7 @@
 import { SolutionsType } from "@/constants/solutions";
 import CustomModal from "../shared/CustomModal";
 import CustomButton from "../shared/CustomButton";
+import BookACallButton from "../shared/BookACallButton";
 import { X } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -65,12 +66,10 @@ const SolutionModal = ({ solution }: SolutionModalProps) => {
             </div>
             {/* Action Buttons */}
             <div className="hidden lg:flex gap-6 lg:flex-row lg:items-center">
-              <CustomButton
+              <BookACallButton
                 variant="secondary"
                 className="w-full lg:w-fit py-3 px-6 rounded-[32px] font-medium text-[16px] leading-[24px] tracking-0 bg-white"
-              >
-                Book a call
-              </CustomButton>
+              />
               <CustomButton className="w-full lg:w-fit py-3 px-6 rounded-[32px] font-medium text-[16px] leading-[24px] tracking-0">
                 Send a message
               </CustomButton>
@@ -81,7 +80,7 @@ const SolutionModal = ({ solution }: SolutionModalProps) => {
             <div
               className={cn(
                 "flex items-center justify-center rounded-[16px] overflow-hidden",
-                `w-[${solution.moreDetails.modalImageWidth[0]}px] h-[${solution.moreDetails.modalImageHeight[0]}px] lg:w-[${solution.moreDetails.modalImageWidth[1]}px] lg:h-[${solution.moreDetails.modalImageHeight[1]}px]`
+                `w-[${solution.moreDetails.modalImageWidth[0]}px] h-[${solution.moreDetails.modalImageHeight[0]}px] lg:w-[${solution.moreDetails.modalImageWidth[1]}px] lg:h-[${solution.moreDetails.modalImageHeight[1]}px]`,
               )}
             >
               <Image
@@ -93,12 +92,10 @@ const SolutionModal = ({ solution }: SolutionModalProps) => {
               />
             </div>
             <div className="flex flex-col gap-6 lg:hidden">
-              <CustomButton
+              <BookACallButton
                 variant="secondary"
                 className="w-full lg:w-fit py-3 px-6 rounded-[32px] font-medium text-[16px] leading-[24px] tracking-0 bg-white"
-              >
-                Book a call
-              </CustomButton>
+              />
               <CustomButton className="w-full lg:w-fit py-3 px-6 rounded-[32px] font-medium text-[16px] leading-[24px] tracking-0">
                 Send a message
               </CustomButton>

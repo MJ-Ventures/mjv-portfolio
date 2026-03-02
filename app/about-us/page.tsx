@@ -1,4 +1,4 @@
-import CustomButton from "@/components/shared/CustomButton";
+import BookACallButton from "@/components/shared/BookACallButton";
 import Logo from "@/components/shared/Logo";
 import Image from "next/image";
 import HowWeWork from "@/components/about-us/HowWeWork";
@@ -24,12 +24,10 @@ const AboutUsPage = () => {
             A hands-on team of technologists, designers, and builders committed
             to making software that works.
           </p>
-          <CustomButton
+          <BookACallButton
             variant="secondary"
             className="w-fit mx-auto py-[14px] px-[17px] rounded-full border-[1.25px] border-black-02 font-medium text-[16px] lg:text-[18px] leading-[28px] tracking-[-0.44px] text-black-01"
-          >
-            Book a call
-          </CustomButton>
+          />
         </div>
 
         {/* Image Section */}
